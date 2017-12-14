@@ -11,23 +11,23 @@
 
 ### npm:
 ``` bash
-$ npm install --save-dev M_Utils
+$ npm install --save-dev m_utils
 ```
 
 webpack、RequireJS、SeaJS等
 
 ``` javascript
 // 完整引入
-const M_Utils = require('M_Utils')
-const OS = M_Utils.getOS()
+const mutils = require('m_utils')
+const OS = mutils.getOS()
 ```
 
 **推荐使用方法**  
 
 你真的不需要完整引入所有函数，所以只引入需要使用的方法即可。
 ``` javascript
-// 只引入部分方法('M_Utils/<方法名>')
-const getOS = require('M_Utils/getOS')
+// 只引入部分方法('mutils/<方法名>')
+const getOS = require('m_utils/getOS')
 const OS = getOS()
 ```
 ## API文档
