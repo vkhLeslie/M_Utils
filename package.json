@@ -1,6 +1,6 @@
 {
   "name": "m_utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "前端业务代码工具类",
   "main": "min/m_utils.min.js",
   "scripts": {
