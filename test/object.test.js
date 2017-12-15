@@ -1,6 +1,6 @@
 describe('Object API:', function () {
     describe('#deepClone()', function () {
-        it(`person deepEqual mutils.deepClone(person) should return true`, function () {
+        it(`person deepEqual m_utils.deepClone(person) should return true`, function () {
             let person = {
                 name: "user",
                 settings: {
@@ -8,10 +8,10 @@ describe('Object API:', function () {
                     second: [1, 2, 3, 4, 3]
                 }
             }
-            assert.deepEqual(person, mutils.deepClone(person))
+            assert.deepEqual(person, m_utils.deepClone(person))
         });
 
-        it(`person === mutils.deepClone(person) should return false`, function () {
+        it(`person === m_utils.deepClone(person) should return false`, function () {
             let person = {
                 name: "user",
                 settings: {
@@ -19,23 +19,23 @@ describe('Object API:', function () {
                     second: [1, 2, 3, 4, 3]
                 }
             }
-            assert.notEqual(person, mutils.deepClone(person))
+            assert.notEqual(person, m_utils.deepClone(person))
         });
     });
 
     describe('#isEmptyObject()', function () {
-        it(`mutils.isEmptyObject({}) should return true`, function () {
-            assert(mutils.deepClone({}))
+        it(`m_utils.isEmptyObject({}) should return true`, function () {
+            assert(m_utils.deepClone({}))
         });
 
-        it(`mutils.isEmptyObject({ one: 1 }) should return false`, function () {
-            assert.notEqual(mutils.isEmptyObject({
+        it(`m_utils.isEmptyObject({ one: 1 }) should return false`, function () {
+            assert.notEqual(m_utils.isEmptyObject({
                 one: 1
             }))
         });
 
-        it(`mutils.isEmptyObject([]) should return false`, function () {
-            assert.notEqual(mutils.isEmptyObject([]))
+        it(`m_utils.isEmptyObject([]) should return false`, function () {
+            assert.notEqual(m_utils.isEmptyObject([]))
         });
     });
 })

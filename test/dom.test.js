@@ -5,13 +5,13 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            mutils.setScrollTop(length)
+            m_utils.setScrollTop(length)
         })
-        it(`mutils.getScrollTop() should return true`, function () {
-            assert(mutils.getScrollTop() === length)
+        it(`m_utils.getScrollTop() should return true`, function () {
+            assert(m_utils.getScrollTop() === length)
         })
         after(function () {
-            mutils.setScrollTop(0)
+            m_utils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -22,14 +22,14 @@ describe('Dom API:', function () {
             length = 20;
         before(function () {
             $body.style.height = '10000px'
-            mutils.setScrollTop(length)
+            m_utils.setScrollTop(length)
         })
-        it(`mutils.getScrollTop() should return true`, function () {
-            mutils.setScrollTop(length)
-            assert(mutils.getScrollTop() === length)
+        it(`m_utils.getScrollTop() should return true`, function () {
+            m_utils.setScrollTop(length)
+            assert(m_utils.getScrollTop() === length)
         })
         after(function () {
-            mutils.setScrollTop(0)
+            m_utils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -45,8 +45,8 @@ describe('Dom API:', function () {
             document.body.appendChild(div)
             $ele = document.querySelector('#J_addClass')
         })
-        it(`mutils.offset() should return true`, function () {
-            let offset = mutils.offset($ele)
+        it(`m_utils.offset() should return true`, function () {
+            let offset = m_utils.offset($ele)
             assert(offset.left === 300 && offset.top === 200)
         })
         after(function () {
@@ -63,15 +63,15 @@ describe('Dom API:', function () {
         before(function () {
             $body.style.height = '10000px'
         })
-        it(`mutils.scrollTo() should return true`, function (done) {
-            mutils.scrollTo(y, duration)
+        it(`m_utils.scrollTo() should return true`, function (done) {
+            m_utils.scrollTo(y, duration)
             setTimeout(function () {
-                assert(mutils.getScrollTop() === y)
+                assert(m_utils.getScrollTop() === y)
                 done()
             }, duration + 200)
         })
         after(function () {
-            mutils.setScrollTop(0)
+            m_utils.setScrollTop(0)
             $body.style.height = bodyHeight
         })
     });
@@ -79,8 +79,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`mutils.windowResize(downCb) should return true`, function (done) {
-            mutils.windowResize(function () {
+        it(`m_utils.windowResize(downCb) should return true`, function (done) {
+            m_utils.windowResize(function () {
                 // 键盘缩回回调
                 assert(window.innerHeight == innerHeight)
                 done()
@@ -92,8 +92,8 @@ describe('Dom API:', function () {
 
     describe('#windowResize()', function () {
         let innerHeight = window.innerHeight
-        it(`mutils.windowResize(upCb) should return true`, function (done) {
-            mutils.windowResize(function () {}, function () {
+        it(`m_utils.windowResize(upCb) should return true`, function (done) {
+            m_utils.windowResize(function () {}, function () {
                 // 键盘弹起回调
                 assert(window.innerHeight === innerHeight - 200)
                 done()

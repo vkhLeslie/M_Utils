@@ -7,9 +7,9 @@ describe('Class API:', function () {
             document.body.appendChild(div)
             $ele = document.querySelector('#J_addClass')
         })
-        it(`mutils.addClass($ele, 'test') should return true`, function () {
-            mutils.addClass($ele, 'test')
-            assert(mutils.hasClass($ele, 'test'))
+        it(`m_utils.addClass($ele, 'test') should return true`, function () {
+            m_utils.addClass($ele, 'test')
+            assert(m_utils.hasClass($ele, 'test'))
         });
         after(function () {
             document.body.removeChild($ele)
@@ -23,10 +23,10 @@ describe('Class API:', function () {
             div.id = 'J_hasClass'
             document.body.appendChild(div)
             $ele = document.querySelector('#J_hasClass')
-            mutils.addClass($ele, 'test')
+            m_utils.addClass($ele, 'test')
         })
-        it(`mutils.hasClass($ele, 'test') should return true`, function () {
-            assert(mutils.hasClass($ele, 'test'))
+        it(`m_utils.hasClass($ele, 'test') should return true`, function () {
+            assert(m_utils.hasClass($ele, 'test'))
         });
         after(function () {
             document.body.removeChild($ele)
@@ -40,11 +40,11 @@ describe('Class API:', function () {
             div.id = 'J_removeClass'
             document.body.appendChild(div)
             $ele = document.querySelector('#J_removeClass')
-            mutils.addClass($ele, 'test')
+            m_utils.addClass($ele, 'test')
         })
-        it(`mutils.removeClass($ele, 'test') should return false`, function () {
-            mutils.removeClass($ele, 'test')
-            assert.notEqual(mutils.hasClass($ele, 'test'))
+        it(`m_utils.removeClass($ele, 'test') should return false`, function () {
+            m_utils.removeClass($ele, 'test')
+            assert.notEqual(m_utils.hasClass($ele, 'test'))
         });
         after(function () {
             document.body.removeChild($ele)
