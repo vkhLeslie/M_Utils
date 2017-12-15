@@ -1,33 +1,33 @@
 describe('Cookie API:', function () {
     describe('#getCookie()', function () {
         before(function () {
-            outils.setCookie('test', 'getTestValue')
+            mutils.setCookie('test', 'getTestValue')
         })
-        it(`outils.getCookie('test', 'getTestValue') should return true`, function () {
-            assert(outils.getCookie('test') === 'getTestValue')
+        it(`mutils.getCookie('test', 'getTestValue') should return true`, function () {
+            assert(mutils.getCookie('test') === 'getTestValue')
         })
         after(function () {
-            outils.removeCookie('test')
+            mutils.removeCookie('test')
         })
     })
 
     describe('#removeCookie()', function () {
         before(function () {
-            outils.setCookie('test', 'removeTestValue')
+            mutils.setCookie('test', 'removeTestValue')
         })
-        it(`outils.removeCookie('test') should return false`, function () {
-            outils.removeCookie('test')
-            assert.notEqual(outils.getCookie('test') === 'removeTestValue')
+        it(`mutils.removeCookie('test') should return false`, function () {
+            mutils.removeCookie('test')
+            assert.notEqual(mutils.getCookie('test') === 'removeTestValue')
         })
     })
 
     describe('#setCookie()', function () {
-        it(`outils.getCookie('test', 'setCookie') should return true`, function () {
-            outils.setCookie('test', 'setCookie')
-            assert(outils.getCookie('test') === 'setCookie')
+        it(`mutils.getCookie('test', 'setCookie') should return true`, function () {
+            mutils.setCookie('test', 'setCookie')
+            assert(mutils.getCookie('test') === 'setCookie')
         })
         after(function () {
-            outils.removeCookie('test')
+            mutils.removeCookie('test')
         })
     })
 })
