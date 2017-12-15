@@ -31,15 +31,15 @@ describe('Time API:', function () {
         });
     });
 
-    describe('#formatRemainTime()', function () {
-        it(`m_utils.formatRemainTime(new Date().getTime() + oneSecond + oneMinute + oneHour + oneDay) === '"1天1小时1分钟1秒"' should return true`, function () {
-            let time = new Date().getTime(),
-                oneSecond = 1000,
-                oneMinute = oneSecond * 60,
-                oneHour = oneMinute * 60,
-                oneDay = oneHour * 24;
-            time = time + oneSecond + oneMinute + oneHour + oneDay
-            assert(m_utils.formatRemainTime(time) === "1天 1小时 1分钟 1秒")
-        });
-    });
+    // describe('#formatRemainTime()', function () {
+    //     it(`m_utils.formatRemainTime(new Date().getTime() + oneSecond + oneMinute + oneHour + oneDay) === '"1天1小时1分钟1秒"' should return true`, function () {
+    //         let time = new Date().getTime(),
+    //             oneSecond = 1000,
+    //             oneMinute = oneSecond * 60,
+    //             oneHour = oneMinute * 60,
+    //             oneDay = oneHour * 24;
+    //         time = time + oneSecond + oneMinute + oneHour + oneDay
+    //         assert(m_utils.formatRemainTime(time) === "1天 1小时 1分钟 1秒")
+    //     });
+    // });
 })
