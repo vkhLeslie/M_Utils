@@ -32,4 +32,6 @@
             return dict[arguments[0]];
         });
     }
+
+    module.exports = formatDate
     
